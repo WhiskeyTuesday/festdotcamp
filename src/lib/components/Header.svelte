@@ -15,11 +15,11 @@
   }, 1000);
 
   const handleMinimize = () => {
-    alert("something funny should happen when you click this, I think");
+    alert("It's Windows ME Themed this time, I dunno why either");
   };
 
   const handleMaximize = () => {
-    alert("something funny should happen when you click that too");
+    alert("go to www.mardi.camp for windows 98 theme Mardi Gras goodness");
   };
 
   const handleClose = () => {
@@ -28,26 +28,26 @@
   };
 </script>
 
-<header class="win98-header">
+<header class="winME-header">
   <div class="title-bar">
-    <div class="title-bar-text">Mardi.camp - Tech Twitter Mardi Gras 2025</div>
+    <div class="title-bar-text">fest.camp - Tech Twitter New Orleans Jazz Fest 2025</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize" on:click={handleMinimize}>
-        <Minus size="16" color="#000" />
+        <div><Minus size="16" color="#000" /></div>
       </button>
       <button aria-label="Maximize" on:click={handleMaximize}>
-        <Square class="mx-auto my-auto" size="12" color="#000" />
+        <div><Square size="16" color="#000" /></div>
       </button>
       <button aria-label="Close" on:click={handleClose}>
-        <X size="16" color="#000" />
+        <div><X size="16" color="#000" /></div>
       </button>
     </div>
   </div>
-  <nav class="win98-menu">
+  <nav class="winME-menu">
     <ul>
       <li>
-        <a href="https://www.mardigrasneworleans.com/parades/">
-          Official NOMG schedule
+        <a href="https://www.nojazzfest.com/music/">
+          Official Festival Website
         </a>
       </li>
       <!-- <li><a href="#">j</a></li> -->
@@ -60,32 +60,33 @@
 </header>
 
 <style>
-  .win98-header {
+  .winME-header {
     background-color: #000080;
     color: #fff;
     padding: 2px;
   }
 
-  .win98-menu {
+  .winME-menu {
     display: flex;
-    background-color: #c0c0c0;
+    background: var(--win-window);
     justify-content: space-between;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+    border-bottom: 1px solid #888;
   }
 
- .win98-menu ul {
+ .winME-menu ul {
     padding: 0;
     margin: 0;
     display: flex;
     list-style-type: none;
   }
 
-  .win98-menu a {
+  .winME-menu a {
     color: #000;
     text-decoration: none;
   }
 
-  .win98-menu a:hover {
+  .winME-menu a:hover {
     text-decoration: underline;
   }
 
@@ -93,7 +94,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000080;
+    background: linear-gradient(to right, var(--win-titlebar), #1084d0);
     /* css padding direction order is top right bottom left */
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   }
@@ -103,15 +104,23 @@
   }
 
   .title-bar-controls button {
-    width: 16px;
-    height: 14px;
-    border: none;
-    background-color: #c0c0c0;
-    margin-left: 2px;
-  }
+    width: 1.5rem;
+    height: 1.33rem;
+    background: var(--win-button);
+    border: 1px solid #888;
+    border-radius: 3px;
+    box-shadow:
+      inset -1px -1px #0a0a0a,
+      inset 1px 1px #fff;
+    }
+
+    .title-bar-controls button div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
   .system-tray {
-    background-color: #c0c0c0;
     text-align: right;
     color: #000;
   }

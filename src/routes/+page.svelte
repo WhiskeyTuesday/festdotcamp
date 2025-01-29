@@ -2,9 +2,8 @@
   import { onMount } from 'svelte';
   import mascot from '$lib/mascot.png';
 
-  let marqueeText = "Welcome to Mardi.camp - The ultimate (only) ingroup weirdo"
-  + " twitter gathering at Mardi Gras 2025 (probably). Laisez les bon temps"
-  + " rouler? I hardly know her";
+  let marqueeText = "Welcome to jazzfest.camp - The ultimate (only) ingroup"
+  + "twitter weirdo meetup at NO Jazz Fest 2025! (probably)";
 
   let stars = [];
 
@@ -12,6 +11,14 @@
     '#582B7D', // Purple
     '#0AA14D', // Green
     '#B8860B'  // Gold
+ ];
+
+  const WINDOWS_ME_COLORS = [
+    '#FFA500', // Orange
+    '#008000', // Green
+    '#FFFF00', // Yellow
+    '#0000FF', // Blue
+    '#FF0000',  // Red
   ];
 
   onMount(() => {
@@ -31,85 +38,98 @@
 </script>
 
 <div class="content-wrapper">
-  <marquee class="space-jam-marquee">{marqueeText}</marquee>
+  <div class="win-ticker">
+    <div class="ticker-content">{marqueeText}</div>
+  </div>
 
-  <div class="win98-window">
-    <div class="window-title">About Mardi.camp</div>
+  <div class="winME-window">
+    <div class="window-title">fest.camp</div>
     <div class="window-content">
-      <p>Come to mardi gras with your weird twitter friends!</p>
-      <p>Dates: March 2nd to 6th 2025 so far </p>
+      <p>Come to jazzfest with your weird twitter friends!</p>
+      <p>Dates: April 24th - 27th and May 1st-4th, 2025</p>
       <p class="text-sm text-gray-500">
-        *everything subject to change
-        I just came up with this idea as a joke ten minutes ago
+        *I'll probably stay in NO the whole stretch but let me know
+        which weekend you want to come to and I'll try to plan things
+        if enough people are coming
       </p>
       <p>Location: New Orleans, Louisiana</p>
     </div>
   </div>
 
-  <div class="win98-window">
+  <div class="winME-window">
     <div class="window-title">Vibes</div>
     <div class="window-content">
       <p>
-        Mardi Gras doesn't have to be about taking drugs,
-        drinking too much, and taking your clothes off.
-      </p>
-      <p>That said, don't let me stop you.</p>
-      <p>
-        My vibe is much more about hanging out with cool people,
-        eating beignets, and watching the parades go by.
-        More Frenchman Street than Bourbon Street, iykyk.
+        Jazz fest is a less chaotic vibe than Mardi Gras but
+        then I'm old and lame and don't party that hard anyway
+        so it's all the same to me. You won't have trouble
+        finding trouble if you want to.
       </p>
       <p>
-        But I'm not your dad so
-        <a href="https://www.youtube.com/watch?v=PsQzRZyWidk">
-          do what you wanna.
+        The lineup this year looks pretty good at a glance.
+        <a href="https://www.nojazzfest.com/lineup/">
+          Check it out for yourself
         </a>
       </p>
-      <br/> <!-- yeah yeah don't use br I know -->
     </div>
   </div>
 
-  <div class="win98-window">
+  <div class="winME-window">
     <div class="window-title">Logistics</div>
     <div class="window-content">
       <p>
-        I have put no thought into this, I have a hotel reservation I made
-        months ago but you probably want to get together and figure out a big
-        airbnb or make your own reservations sooner rather than later.
-        Check back here for more information if anyone takes the initiative.
+        Tickets are $320 per weekend if you buy them now
+        (as of January 21st). The prices will go up and they
+        will probably sell out but there are always one day
+        tickets available on the street day of in my experience.
+      </p>
+      <p>
+        There are also VIP tickets of various levels available
+        if you're into that. They tend to sell out quickly so
+        I'd get on it if you're interested.
+        <a href="https://www.nojazzfest.com/tickets/">
+          Click here to see all the options
+        </a>
+      </p>
+      <p>
+        I've got a reservation in the warehouse district for
+        the full couple of weeks but I'm happy to help
+        organize a big airbnb or whatever for either weekend
+        or both. Let me know if you're interested and we'll
+        start a group chat or something.
       </p>
     </div>
   </div>
 
-  <div class="win98-window">
+  <div class="winME-window">
     <div class="window-title">Activities</div>
     <div class="window-content">
-      <p>March 2nd: Something?</p>
-      <p>March 3rd: Lundi Gras</p>
-      <p>March 4th: Mardi Gras</p>
-      <p>March 5th: Ash Wednesday, seek absolution</p>
-      <p>March 6th: Leave probably</p>
+      The schedule doesn't usually get nailed down and released
+      until way later but you can see the lineups so far at
+      <a href="https://www.nojazzfest.com/music">The official
+        website</a> and there are always a ton of other things
+      to do in the city. Depending how many people come we
+      can plan some group activities.
     </div>
   </div>
 
-  <div class="win98-window">
+  <div class="winME-window">
     <div class="window-title">Featured Guests</div>
     <div class="window-content">
       <ul>
         <li>@WhiskeyTuesday</li>
-        <li>@dschorno</li>
       </ul>
     </div>
   </div>
 
-  <div class="win98-window">
+  <div class="winME-window">
     <div class="window-title">Contact</div>
     <div class="window-content">
       <p>
         DM @WhiskeyTuesday on twitter if you're interested in coming
         or have any questions or want to help other people figure
         out their plans or want to organize something or want me
-        to put you on the featured guest list. Or don't.
+        to put you on the featured guest list or whatever.
       </p>
     </div>
   </div>
@@ -158,15 +178,7 @@
     color: #fff;
   }
 
-  .space-jam-marquee {
-    background-color: #000;
-    color: #ff0;
-    font-weight: bold;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-
-  .win98-window {
+  .winME-window {
     background-color: #c0c0c0;
     border: 2px solid #fff;
     box-shadow: 2px 2px 0 #000;
@@ -226,11 +238,91 @@
     50% { transform: translateY(-20px); }
   }
 
-  :global(body) {
-    margin: 0;
-    padding: 0;
-    font-family: 'MS Sans Serif', Arial, sans-serif;
-    background-color: #008080;
+  .win-ticker {
     color: #000;
+    background: var(--win-window);
+    border: 2px solid var(--win-border);
+    border-radius: 3px;
+    box-shadow:
+      inset -1px -1px #0a0a0a,
+      inset 1px 1px #dfdfdf;
+    padding: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
+  .ticker-content {
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  @keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Add subtle hover effect to windows */
+  .winME-window:hover {
+    border-color: var(--win-titlebar);
+  }
+
+  .content-wrapper {
+    padding: 10px;
+    background: var(--win-background);
+    color: var(--win-text);
+    font-family: 'Microsoft Sans Serif', 'MS Sans Serif', sans-serif;
+  }
+
+  .winME-window {
+    background: var(--win-window);
+    border: 2px solid var(--win-border);
+    border-radius: 3px;
+    box-shadow:
+      inset -1px -1px #0a0a0a,
+      inset 1px 1px #dfdfdf,
+      inset -2px -2px grey,
+      inset 2px 2px #fff;
+    margin-bottom: 10px;
+  }
+
+  .winME-window p {
+    padding-bottom: 0.5rem;
+  }
+
+  .window-title {
+    background: linear-gradient(to right, var(--win-titlebar), #1084d0);
+    color: white;
+    padding: 3px 5px 3px 5px;
+    font-weight: bold;
+  }
+
+  /* Replace space background with Windows ME style */
+  .space-background {
+    background: linear-gradient(to bottom right, #3a6ea5, #1084d0);
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  /* Update star styling to match Windows ME aesthetic */
+  .star {
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  /* Add Windows ME style scrollbar */
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--win-button);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--win-window);
+    border: 1px solid #888;
+    border-radius: 3px;
   }
 </style>

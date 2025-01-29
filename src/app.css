@@ -1,3 +1,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities'
+@import 'tailwindcss/utilities';
+
+/* Windows ME specific colors and styles */
+:root {
+  --win-background: #3a6ea5;
+  --win-titlebar: #0a246a;
+  --win-button: #d4d0c8;
+  --win-border: #ffffff;
+  --win-text: #000000;
+  --win-window: #d4d0c8;
+}
