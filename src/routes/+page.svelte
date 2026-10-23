@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import mascot from '$lib/mascot.png';
+  import mascot from '#lib/mascot.png';
 
   let marqueeText = "Welcome to jazzfest.camp - The ultimate (only) ingroup"
   + "twitter weirdo meetup at NO Jazz Fest 2025! (probably)";
