@@ -6,7 +6,7 @@
   <p>© 2025 fest.camp - All rights reserved</p>
   <p>Best viewed with Netscape Navigator or Internet Explorer</p>
   <p>
-    <a href="{page.url.href}">fest.camp</a> is powered by
+    <a href="{page.url.pathname}">fest.camp</a> is powered by
     <a href="https://www.lcc.solutions">The Lifestyle™ Computer Company</a>
     and maintained by <a href="https://www.elijasorensen.com">Elija Sorensen</a>
   </p>
